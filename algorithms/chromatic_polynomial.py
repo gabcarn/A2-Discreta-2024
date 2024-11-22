@@ -38,6 +38,5 @@ def chromatic_polynomial(graph, vertex, original_graph=None):
     deleted_graph = delete_edge(graph, u, v)
     deleted_poly = chromatic_polynomial(deleted_graph, vertex, original_graph)
     
-
     coefficients = deleted_poly - contracted_poly
     return coefficients
