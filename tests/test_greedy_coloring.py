@@ -40,10 +40,7 @@ class TestGreedyColoring(unittest.TestCase):
         # Testa o algoritmo com grafos com diferentes entradas (não números inteiros)
         coloring = greedy_coloring(G_letters)
         
-        # Checa se não há conflitor de coloração
+        # Checa se não há conflitos de coloração
         for vertex, neighbors in G_letters.items():
             for neighbor in neighbors:
                 self.assertNotEqual(coloring[vertex], coloring[neighbor])
-
-if __name__ == '__main__':
-    unittest.main()
