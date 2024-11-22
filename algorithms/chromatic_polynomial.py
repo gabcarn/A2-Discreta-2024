@@ -1,7 +1,7 @@
 import copy
 import numpy as np
-from contraction import contract_edge
-from deletion import delete_edge
+from utils.contraction import contract_edge
+from utils.deletion import delete_edge
 
 def chromatic_polynomial(graph, vertex, original_graph=None):
     """Calcula os coeficientes do polinomio cromatico de um grafo usando o metodo de contracao-delecao.

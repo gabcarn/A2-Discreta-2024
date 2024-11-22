@@ -1,47 +1,15 @@
-from brute_force import exhaustive_search as X
-from greedy_coloring import greedy_coloring as G
+from algorithms.brute_force import exhaustive_search as X
+from algorithms.greedy_coloring import greedy_coloring as G
+from data.graphs import G_Crow, G_10_9_4, G_10_9_6
+import unittest
 
-
-G_Crow = {
-    0: [1, 2, 3, 4, 5], # 0 | 0
-    1: [0, 2, 5],       # 1 | 1
-    2: [0, 1, 3],       # 2 | 2
-    3: [0, 2, 4],       # 1 | 3
-    4: [0, 3, 5],       # 3 | 4
-    5: [0, 1, 4]        # 4 | 5
-}                       # X | G
-
-
-G_10_9_4 = {
-    0: [1, 2, 3],      # 0 | 0
-    1: [0, 2, 3],      # 1 | 1
-    2: [0, 1, 3],      # 2 | 2
-    3: [0, 1, 2, 4],   # 3 | 3
-    4: [3, 5],         # 0 | 4
-    5: [4, 6],         # 1 | 5
-    6: [5, 7],         # 0 | 6
-    7: [6, 8],         # 1 | 7
-    8: [7, 9],         # 0 | 8
-    9: [8]             # 1 | 9
-}                      # X | G
-
-G_10_9_6 = {
-    0: [1, 2, 3, 4, 5],  # 0 | 0
-    1: [0, 2, 3, 4, 5],  # 1 | 1
-    2: [0, 1, 3, 4, 5],  # 2 | 2
-    3: [0, 1, 2, 4, 5],  # 3 | 3
-    4: [0, 1, 2, 3, 5],  # 4 | 4
-    5: [0, 1, 2, 3, 4],  # 5 | 5
-    6: [7],              # 0 | 0
-    7: [6, 8],           # 1 | 1
-    8: [7, 9],           # 0 | 2
-    9: [8]               # 1 | 3
-}                        # X | G
-
-print(X(G_10_9_4, 4, [])) # Numero cromatico = 4, coloracao encontrada: 5-coloracao
+# print(X(G_10_9_6, 6, [])) # Numero cromatico = 4, coloracao encontrada: 5-coloracao
 # print(X(G_10_9_6, 6, []))
 # print(X(G_Crow, 5, []))
 
 # print(G(G_10_9_4))
 # print(G(G_10_9_6))
 # print(G(G_Crow))
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)

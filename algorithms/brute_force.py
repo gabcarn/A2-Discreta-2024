@@ -1,5 +1,5 @@
 import numpy as np
-from validation import check_coloring
+from utils.validation import check_coloring
 
 def exhaustive_search(G: dict, q: int, coloring: list) -> list:
     """ Algoritmo para encontrar uma q-coloracao para o grafo G, caso exista.
@@ -32,4 +32,3 @@ def exhaustive_search(G: dict, q: int, coloring: list) -> list:
             if next_vertex_coloring != []:
                 return next_vertex_coloring
         return []
-            
