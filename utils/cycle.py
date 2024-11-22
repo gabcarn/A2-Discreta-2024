@@ -46,6 +46,7 @@ def find_closest_ancestor(parents: Dict[Any, Any], v: Any, w: Any) -> Any:
     while v in parents:
         v_ancestors.add(v)
         v = parents[v]
+    v_ancestors.add(v)
     # Encontra o ancestral comum mais proximo de v e w
     while w not in v_ancestors:
         w = parents[w]

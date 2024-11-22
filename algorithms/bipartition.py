@@ -1,6 +1,9 @@
 from typing import Dict, Any, Union, Tuple, List
 from collections import deque
-from utils.cycle import build_odd_cycle, find_closest_ancestor
+
+import sys
+sys.path.append('../utils')
+from cycle import build_odd_cycle, find_closest_ancestor
 
 def bipartition(graph: Dict[Any, Any]) -> Union[Tuple[bool, Dict[Any, Any]], Tuple[bool, List]]:
     """Verificar se um grafo conexo e bipartido. Se for, retorna uma 2-coloracao. Caso
